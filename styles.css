@@ -293,6 +293,7 @@ svg { display: block; max-width: 100%; }
 
 /* ---------- Sections ---------- */
 .section { position: relative; padding: clamp(4.5rem, 9vw, 7.5rem) 0; }
+#services { padding-top: clamp(3rem, 6vw, 5rem); }
 .section-alt { background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .section-head { max-width: 40rem; margin: 0 auto 3.5rem; text-align: center; }
 .section-head-left { text-align: left; margin-left: 0; margin-bottom: 1.5rem; }
@@ -308,6 +309,7 @@ svg { display: block; max-width: 100%; }
 /* ---------- Grid / cards ---------- */
 .grid { display: grid; gap: 1.6rem; }
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
+.projects-grid { display: grid; gap: 1.6rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 
 .card {
   position: relative;
