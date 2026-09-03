@@ -47,9 +47,15 @@
   <main id="main">
     <!-- Hero -->
     <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <span class="orb orb-1"></span>
+        <span class="orb orb-2"></span>
+        <span class="orb orb-3"></span>
+        <span class="hero-grid"></span>
+      </div>
       <div class="container hero-inner">
-        <p class="eyebrow">IT Development · Germany</p>
-        <h1>Can be done.</h1>
+        <p class="eyebrow eyebrow-badge">IT Development · Germany</p>
+        <h1><span class="grad-text">Can be done.</span></h1>
         <p class="lead">
           BlankTrading designs, builds, and maintains dependable software, web
           platforms, and cloud solutions — engineered with precision.
@@ -70,22 +76,60 @@
         </div>
 
         <div class="grid grid-2">
-          <article class="card">
+          <!-- Web Development — a website assembling itself -->
+          <article class="card card-anim" data-service="web">
+            <span class="aura aura-web" aria-hidden="true">
+              <span class="frame"></span>
+              <i class="cb cb-tl"></i><i class="cb cb-tr"></i><i class="cb cb-bl"></i><i class="cb cb-br"></i>
+              <i class="guide guide-1"></i>
+              <i class="guide guide-2"></i>
+              <span class="code">
+                <b>&lt;section class="hero"&gt;</b>
+                <b>&nbsp;&nbsp;&lt;h1&gt;Can be done.&lt;/h1&gt;</b>
+                <b>&lt;/section&gt;</b>
+              </span>
+            </span>
             <h3>Web Development</h3>
             <p>Fast, responsive websites and web applications built on modern, maintainable foundations.</p>
           </article>
 
-          <article class="card">
+          <!-- Custom Software — architecture graph with flowing data -->
+          <article class="card card-anim" data-service="software">
+            <span class="aura aura-software" aria-hidden="true">
+              <span class="frame"></span>
+              <i class="cb cb-tl"></i><i class="cb cb-tr"></i><i class="cb cb-bl"></i><i class="cb cb-br"></i>
+              <i class="nd nd-t"></i><i class="nd nd-r"></i><i class="nd nd-b"></i><i class="nd nd-l"></i>
+              <span class="code">
+                <b>#include &lt;core.h&gt;</b>
+                <b>int main() {</b>
+                <b>&nbsp;&nbsp;app.run();</b>
+              </span>
+            </span>
             <h3>Custom Software</h3>
             <p>Tailored applications and internal tools that fit your processes exactly.</p>
           </article>
 
-          <article class="card">
+          <!-- Cloud & DevOps — autoscaling servers syncing to a cloud -->
+          <article class="card card-anim" data-service="cloud">
+            <span class="aura aura-cloud" aria-hidden="true">
+              <span class="frame"></span>
+              <i class="cb cb-tl"></i><i class="cb cb-tr"></i><i class="cb cb-bl"></i><i class="cb cb-br"></i>
+              <svg class="cl cl-1" viewBox="0 0 64 40"><path d="M18 34a10 10 0 0 1 .5-19.9A13 13 0 0 1 44 15a9 9 0 0 1 4 19z"/></svg>
+              <svg class="cl cl-2" viewBox="0 0 64 40"><path d="M18 34a10 10 0 0 1 .5-19.9A13 13 0 0 1 44 15a9 9 0 0 1 4 19z"/></svg>
+              <svg class="cl cl-3" viewBox="0 0 64 40"><path d="M18 34a10 10 0 0 1 .5-19.9A13 13 0 0 1 44 15a9 9 0 0 1 4 19z"/></svg>
+            </span>
             <h3>Cloud &amp; DevOps</h3>
             <p>Scalable infrastructure, automated deployments, and reliable hosting.</p>
           </article>
 
-          <article class="card">
+          <!-- Support & Maintenance — live monitoring graph -->
+          <article class="card card-anim" data-service="support">
+            <span class="aura aura-support" aria-hidden="true">
+              <span class="frame"></span>
+              <i class="cb cb-tl"></i><i class="cb cb-tr"></i><i class="cb cb-bl"></i><i class="cb cb-br"></i>
+              <i class="st st-1"></i>
+              <i class="st st-2"></i>
+            </span>
             <h3>Support &amp; Maintenance</h3>
             <p>Ongoing updates, monitoring, and improvements that keep your software secure.</p>
           </article>
