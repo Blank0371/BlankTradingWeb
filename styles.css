@@ -293,7 +293,8 @@ svg { display: block; max-width: 100%; }
 
 /* ---------- Sections ---------- */
 .section { position: relative; padding: clamp(4.5rem, 9vw, 7.5rem) 0; }
-#services { padding-top: clamp(3rem, 6vw, 5rem); }
+#services { padding-top: clamp(2rem, 4vw, 3.25rem); }
+#services .section-head { margin-bottom: 5rem; }
 .section-alt { background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 .section-head { max-width: 40rem; margin: 0 auto 3.5rem; text-align: center; }
 .section-head-left { text-align: left; margin-left: 0; margin-bottom: 1.5rem; }
