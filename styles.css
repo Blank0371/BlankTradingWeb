@@ -310,6 +310,10 @@ svg { display: block; max-width: 100%; }
 .grid { display: grid; gap: 1.6rem; }
 .grid-2 { grid-template-columns: repeat(2, 1fr); }
 .projects-grid { display: grid; gap: 1.6rem; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.project-card { display: block; color: inherit; }
+.project-card:hover { color: inherit; }
+.project-card h3 { transition: color .2s ease; }
+.project-card:hover h3 { color: var(--blue); }
 
 .card {
   position: relative;
