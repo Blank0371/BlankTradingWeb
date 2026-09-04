@@ -43,6 +43,7 @@ body {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal { opacity: 1 !important; transform: none !important; }
+  .scroll-progress { display: none !important; }
 }
 
 h1, h2, h3 { line-height: 1.12; letter-spacing: -0.025em; margin: 0 0 .5em; color: #fff; }
@@ -154,12 +155,25 @@ svg { display: block; max-width: 100%; }
   backdrop-filter: saturate(160%) blur(14px);
   border-bottom: 1px solid var(--border);
 }
+.site-header::after {
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: -1px;
+  height: 1px;
+  background: var(--grad);
+  opacity: 0;
+  transition: opacity .35s ease;
+}
+.site-header.scrolled { background: rgba(8, 11, 18, .9); }
+.site-header.scrolled::after { opacity: .5; }
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 72px;
+  transition: height .3s ease;
 }
+.site-header.scrolled .header-inner { height: 60px; }
 .brand { display: inline-flex; align-items: center; gap: .6rem; color: #fff; }
 .brand:hover { color: #fff; }
 .brand-mark { display: inline-flex; border-radius: 8px; transition: transform .3s ease; }
@@ -209,7 +223,7 @@ svg { display: block; max-width: 100%; }
   text-align: center;
   overflow: hidden;
 }
-.hero-bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
+.hero-bg { position: absolute; top: -30%; left: 0; right: 0; bottom: 0; z-index: 0; pointer-events: none; will-change: transform; }
 .orb {
   position: absolute;
   border-radius: 50%;
@@ -304,8 +318,31 @@ svg { display: block; max-width: 100%; }
   opacity: 0;
   transform: translateY(26px);
   transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1);
+  will-change: opacity, transform;
 }
 .reveal.in { opacity: 1; transform: none; }
+
+/* Directional variants — set via data-reveal in script.js */
+.reveal[data-reveal="left"]  { transform: translateX(-40px); }
+.reveal[data-reveal="right"] { transform: translateX(40px); }
+.reveal[data-reveal="scale"] { transform: scale(.92); }
+.reveal[data-reveal="left"].in,
+.reveal[data-reveal="right"].in,
+.reveal[data-reveal="scale"].in { transform: none; }
+
+/* ---------- Scroll progress bar ---------- */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  background: var(--grad);
+  z-index: 200;
+  pointer-events: none;
+  box-shadow: 0 0 12px rgba(79,156,249,.55);
+}
 
 /* ---------- Grid / cards ---------- */
 .grid { display: grid; gap: 1.6rem; }
