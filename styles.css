@@ -594,6 +594,9 @@ svg { display: block; max-width: 100%; }
 }
 .contact-inner { position: relative; max-width: 34rem; margin: 0 auto; }
 .contact-lead { color: var(--muted); font-size: 1.1rem; margin: 0 0 2rem; }
+.contact-support { color: var(--muted); font-size: .95rem; margin: 1.25rem 0 0; }
+.contact-support a { color: var(--blue); font-weight: 600; text-decoration: none; }
+.contact-support a:hover { text-decoration: underline; }
 
 /* ---------- Footer ---------- */
 .site-footer {
@@ -613,6 +616,9 @@ svg { display: block; max-width: 100%; }
 .impressum p { margin: 0; color: var(--faint); font-size: .82rem; line-height: 1.7; }
 .impressum strong { color: var(--muted); }
 .impressum a { color: var(--blue); }
+.footer-support { margin: .75rem 0 0; font-size: .85rem; }
+.footer-support a { color: var(--blue); text-decoration: none; }
+.footer-support a:hover { text-decoration: underline; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 720px) {

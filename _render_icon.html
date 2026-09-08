@@ -1,0 +1,17 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0}</style></head>
+<body>
+<canvas id="c" width="512" height="512"></canvas>
+<script>
+const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='#101725'/><g fill='none' stroke='#4f9cf9' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'><path d='M11 8V24'/><path d='M11 8H16.5a4 4 0 0 1 0 8H11'/><path d='M11 16H16.5a4 4 0 0 1 0 8H11'/></g></svg>`;
+window.done = false;
+const img = new Image();
+img.onload = () => {
+  const c = document.getElementById('c');
+  const ctx = c.getContext('2d');
+  ctx.drawImage(img, 0, 0, 512, 512);
+  window.pngData = c.toDataURL('image/png').split(',')[1];
+  window.done = true;
+};
+img.src = 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+</script>
+</body></html>

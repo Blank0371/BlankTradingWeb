@@ -2,10 +2,10 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "blanktrading-site",
+      "name": "static",
       "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8123"],
-      "port": 8123
+      "runtimeArgs": ["-m", "http.server", "5178"],
+      "port": 5178
     }
   ]
 }
